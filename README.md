@@ -11,6 +11,12 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
 |----------|-----| ----------|
 | ![](imgs/input.jpg) | ![](imgs/label.jpg) |  ![](imgs/out.jpg) |
 
+## 사용한 데이터셋
+* isbi 2012 EM (Electron Microscopy) dataset
+* 전자현미경으로 촬영한 세포의 membrain segmentation
+* 본 repository의 dataset/ dir에 저장해둠
+* 공식 데이터 다운로드(github) : https://github.com/alexklibisz/isbi-2012
+
 ## 구성
 * `*.ipynb` : 만들어진 *.py를 바탕으로 train, test(eval)을 진행
 * `train.py` : command line based train, tes(eval)을 진행
