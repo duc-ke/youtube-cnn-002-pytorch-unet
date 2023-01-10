@@ -230,8 +230,10 @@ class RandomFlip(object):
 
 
 ## 네트워크 학습하기
+# transform은 Randomflip 삭제해야함.
 transform = transforms.Compose([Normalization(mean=0.5, std=0.5), ToTensor()])
 
+# shuffle  제거
 dataset_test = Dataset(data_dir=os.path.join(data_dir, 'test'), transform=transform)
 loader_test = DataLoader(dataset_test, batch_size=batch_size, shuffle=False, num_workers=8)
 
@@ -246,7 +248,6 @@ optim = torch.optim.Adam(net.parameters(), lr=lr)
 
 ## 그밖에 부수적인 variables 설정하기
 num_data_test = len(dataset_test)
-
 num_batch_test = np.ceil(num_data_test / batch_size)
 
 ## 그밖에 부수적인 functions 설정하기
@@ -302,11 +303,12 @@ with torch.no_grad():
         print("TEST: BATCH %04d / %04d | LOSS %.4f" %
               (batch, num_batch_test, np.mean(loss_arr)))
 
-        # Tensorboard 저장하기
+        # output 변경
         label = fn_tonumpy(label)
         input = fn_tonumpy(fn_denorm(input, mean=0.5, std=0.5))
         output = fn_tonumpy(fn_class(output))
 
+        # eval에선 출력결과물을 저장: png와 np 두가지 방식으로 저장
         for j in range(label.shape[0]):
             id = num_batch_test * (batch - 1) + j
 

@@ -1,3 +1,6 @@
+"""_summary_
+    eval 결과 npy를 불러서 visualization하는 스크립트
+"""
 import os
 import numpy as np
 import matplotlib.pyplot as plt
