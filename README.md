@@ -1,13 +1,15 @@
 # UNet torch
 Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) architectures를 pytorch로 구현
 
-| Original | G.T | Inference |
-|----------|-----| ----------|
-| ![](imgs/input.jpg) | ![](imgs/label.jpg) |  ![](imgs/out.jpg) |
 
 **본 repository는 @hanyoseob 님의 `youtube-cnn-002-pytorch-unet` [github](https://github.com/hanyoseob/youtube-cnn-002-pytorch-unet)을 바탕으로 공부하여 약간의 코드 수정, 주석 및 코드 리펙토링을 가미하였음을 밝힙니다.**
 
-![ddd](imgs/unet_arch.jpg)
+<center><img src="imgs/unet_arch.jpg" width="700" height="450"></center>
+
+
+| Original | G.T | Inference |
+|----------|-----| ----------|
+| ![](imgs/input.jpg) | ![](imgs/label.jpg) |  ![](imgs/out.jpg) |
 
 ## 구성
 * `*.ipynb` : 만들어진 *.py를 바탕으로 train, test(eval)을 진행
