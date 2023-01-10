@@ -16,7 +16,12 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
 * `train.py` : command line based train, tes(eval)을 진행
 
 ## command
-* train, evaluation 모드를 선택가능 
+### dataset 준비
+해당 command 실행 시, datasets/ 아래에 train, test, val dir와 npy데이터셋 생성
+ ```bash
+ python data_read.py
+ ```
+### training / evaluation
   ```bash
   python "train.py" \
         --lr 1e-2 --batch_size 2 --num_epoch 300 \
