@@ -1,12 +1,30 @@
-# UNET 구현하기 (003 ~ 008)
-[![논문 작성시 꿀팁-003 UNet: 데이터셋 전처리 하기](https://i.ytimg.com/vi/fWmRYmjF-Xw/sddefault.jpg)](https://www.youtube.com/watch?v=fWmRYmjF-Xw)
+# UNet torch
+Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) architectures를 pytorch로 구현
 
-[![논문 작성시 꿀팁-004 UNet 구조 구현하기](https://i.ytimg.com/vi/sSxdQq9CCx0/sddefault.jpg)](https://www.youtube.com/watch?v=sSxdQq9CCx0)
+| Original | G.T | Inference |
+|----------|-----| ----------|
+| ![](imgs/input.jpg) | ![](imgs/label.jpg) |  ![](imgs/out.jpg) |
 
-[![논문 작성시 꿀팁-005 Data loader & transform 구현하기](https://i.ytimg.com/vi/1gMnChpUS9k/sddefault.jpg)](https://www.youtube.com/watch?v=1gMnChpUS9k)
+**본 repository는 @hanyoseob 님의 `youtube-cnn-002-pytorch-unet` [github](https://github.com/hanyoseob/youtube-cnn-002-pytorch-unet)을 바탕으로 공부하여 약간의 코드 수정, 주석 및 코드 리펙토링을 가미하였음을 밝힙니다.**
 
-[![논문 작성시 꿀팁-006 UNet training 시키기](https://i.ytimg.com/vi/rBb597ct_FQ/sddefault.jpg)](https://www.youtube.com/watch?v=rBb597ct_FQ)
+![ddd](imgs/unet_arch.jpg)
 
-[![논문 작성시 꿀팁-007 UNet testing 시키기](https://i.ytimg.com/vi/igvk1W1JtHA/sddefault.jpg)](https://www.youtube.com/watch?v=igvk1W1JtHA)
+## 구성
+* `*.ipynb` : 만들어진 *.py를 바탕으로 train, test(eval)을 진행
+* `train.py` : command line based train, tes(eval)을 진행
 
-[![논문 작성시 꿀팁-008 Code 최적화 & parser 추가하기](https://i.ytimg.com/vi/CLL9FWfsMTo/sddefault.jpg)](https://www.youtube.com/watch?v=CLL9FWfsMTo)
+## command
+* train, evaluation 모드를 선택가능 
+  ```bash
+  python "train.py" \
+        --lr 1e-2 --batch_size 2 --num_epoch 300 \
+        --data_dir "datasets" \
+        --ckpt_dir "checkpoint" \ # ckpt dir 생성
+        --log_dir "log" \         # log dir 생성
+        --result_dir "result" \   # 결과 dir 생성
+        --mode "test" \           # train or test
+        --train_continue "off"    # on: ckpt를 이어 학습, off: 새로 학습
+  ```
+
+# Reference
+[UNET original paper](https://arxiv.org/pdf/1505.04597.pdf)
