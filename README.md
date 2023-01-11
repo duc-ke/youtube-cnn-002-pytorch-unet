@@ -18,7 +18,8 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
 
 ## 구성
 * `학습 및 테스트.ipynb` : 만들어진 *.py를 바탕으로 train, test(eval)을 진행
-  * train, evaluation proc included
+  * train, evaluation proc included 
+  * single or multi gpu selection included
   * visualization included
   * jupyter tensorboard included
 * `train.py` : command line based train, tes(eval)을 진행
