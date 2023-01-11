@@ -17,7 +17,10 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
 * 공식 데이터 다운로드(github) : https://github.com/alexklibisz/isbi-2012
 
 ## 구성
-* `*.ipynb` : 만들어진 *.py를 바탕으로 train, test(eval)을 진행
+* `학습 및 테스트.ipynb` : 만들어진 *.py를 바탕으로 train, test(eval)을 진행
+  * train, evaluation proc included
+  * visualization included
+  * jupyter tensorboard included
 * `train.py` : command line based train, tes(eval)을 진행
 
 ## 실행 방법
