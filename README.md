@@ -6,8 +6,6 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
 
 <center><img src="imgs/unet_arch.jpg" width="700" height="450"></center>
 
-![](imgs/unet_arch.jpg)
-
 | Original | G.T | Inference |
 |----------|-----| ----------|
 | ![](imgs/input_0000.png) | ![](imgs/label_0000.png) |  ![](imgs/output_0000.png) |
