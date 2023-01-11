@@ -31,7 +31,7 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
   ```
 ### training / evaluation
 두 가지 방식의 실행 가능
-1. jupyter 실행 : 개인 jupyter환경 혹은 colab에서 `xxx.ipynb` 실행
+1. jupyter 실행 : 개인 jupyter환경 혹은 colab에서 `학습 및 테스트.ipynb` 실행
 2. command 실행
    ```bash
    python "train.py" \
