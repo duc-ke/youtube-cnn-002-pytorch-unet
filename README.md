@@ -45,4 +45,5 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
    ```
 
 # Reference
-[UNET original paper](https://arxiv.org/pdf/1505.04597.pdf)
+* [UNET original paper](https://arxiv.org/pdf/1505.04597.pdf)
+* [한요섭 박사님 UNet github](https://github.com/hanyoseob/youtube-cnn-002-pytorch-unet)
