@@ -9,7 +9,7 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
 
 | Original | G.T | Inference |
 |----------|-----| ----------|
-| ![](imgs/input.jpg) | ![](imgs/label.jpg) |  ![](imgs/out.jpg) |
+| ![](imgs/input_0000.jpg) | ![](imgs/label_0000.jpg) |  ![](imgs/output_0000.jpg) |
 
 ## 사용한 데이터셋
 * isbi 2012 EM (Electron Microscopy) dataset
