@@ -6,10 +6,9 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
 
 <center><img src="imgs/unet_arch.jpg" width="700" height="450"></center>
 
-
-| Original | G.T | Inference |
+| Original | G.T | Inference (epoch 10) |
 |----------|-----| ----------|
-| ![](imgs/input_0000.jpg) | ![](imgs/label_0000.jpg) |  ![](imgs/output_0000.jpg) |
+| ![](imgs/input_0000.png) | ![](imgs/label_0000.png) |  ![](imgs/output_0000.png) |
 
 ## 사용한 데이터셋
 * isbi 2012 EM (Electron Microscopy) dataset
@@ -18,7 +17,11 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
 * 공식 데이터 다운로드(github) : https://github.com/alexklibisz/isbi-2012
 
 ## 구성
-* `*.ipynb` : 만들어진 *.py를 바탕으로 train, test(eval)을 진행
+* `학습 및 테스트.ipynb` : 만들어진 *.py를 바탕으로 train, test(eval)을 진행
+  * train, evaluation proc included 
+  * single or multi gpu selection included
+  * visualization included
+  * jupyter tensorboard included
 * `train.py` : command line based train, tes(eval)을 진행
 
 ## 실행 방법
@@ -29,7 +32,7 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
   ```
 ### training / evaluation
 두 가지 방식의 실행 가능
-1. jupyter 실행 : 개인 jupyter환경 혹은 colab에서 `xxx.ipynb` 실행
+1. jupyter 실행 : 개인 jupyter환경 혹은 colab에서 `학습 및 테스트.ipynb` 실행
 2. command 실행
    ```bash
    python "train.py" \
@@ -43,4 +46,5 @@ Sementic segmentation (이미지 픽셀분할)분야의 vanilla UNet(2015) archi
    ```
 
 # Reference
-[UNET original paper](https://arxiv.org/pdf/1505.04597.pdf)
+* [UNET original paper](https://arxiv.org/pdf/1505.04597.pdf)
+* [한요섭 박사님 UNet github](https://github.com/hanyoseob/youtube-cnn-002-pytorch-unet)
